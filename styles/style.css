@@ -1,0 +1,185 @@
+:root {
+  --fg: #fff;
+  --bg: #111;
+}
+
+* {
+  margin: 0;
+  font-weight: 400;
+}
+
+b {
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.15rem;
+}
+
+html, body {
+  font-family: 'Kanit', sans-serif;
+  color: var(--fg);
+  background-color: #111;
+
+  /* for weird ass z fighting issue */
+  z-index: -5;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  scroll-behavior: smooth;
+  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.page {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+/* header area */
+#background {
+  background-image: url("../content/images/sears.jpg");
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  filter: blur(2px);
+  z-index: -2;
+}
+
+#background img {
+  width: 100%;
+  object-fit: cover;
+  margin-top: -50%;
+  z-index: -1;
+}
+
+/* name */
+#firstName, #firstName span {
+  font-weight: 700;
+  font-size: 8rem;
+}
+
+#lastName, #lastName span {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-top: -3rem;
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  text-align: center;
+}
+
+/* first name hover stuff */
+#firstName {
+  display: inline-block;
+  text-shadow: 4px 4px 0 #777;
+}
+
+/* end of first name hover stuff */
+
+.hint-down {
+  margin-top: 32px;
+  width: 32px;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+/* header links */
+.links {
+  display: flex;
+}
+
+.links .button {
+  font-size: 1.5rem;
+  padding: 2px 8px;
+  margin: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in-out;
+}
+
+a, a:after {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Maximum width */
+@media (max-width: 520px) {
+  #firstName, #firstName span {
+    font-size: 6rem;
+  }
+
+  #header h2 {
+    font-size: 1.25rem;
+  }
+
+  #lastName {
+    font-weight: 700;
+    font-size: 2.25rem !important;
+    margin-top: -2.25rem;
+  }
+
+  .links .button {
+    font-size: 1.25rem;
+  }
+}
+
+/* about, projects, socials areas */ 
+.area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.area > div {
+  width: calc(100% - 34px);
+  height: calc(100% - 34px);
+  border-color: #aaa;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.area > div > div {
+  width: calc(100% - 32px);
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.area > div > div > p {
+  text-indent: 1cm;
+}
