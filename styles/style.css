@@ -16,8 +16,9 @@ p {
   font-size: 1.15rem;
 }
 
-html, body {
-  font-family: 'Kanit', sans-serif;
+html,
+body {
+  font-family: "Kanit", sans-serif;
   color: var(--fg);
   background-color: #111;
 
@@ -28,7 +29,7 @@ html, body {
   top: 0;
 
   scroll-behavior: smooth;
-  
+
   margin: 0;
   padding: 0;
   height: 100%;
@@ -37,9 +38,7 @@ html, body {
 
 .page {
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
 }
-
 
 /* header area */
 #background {
@@ -62,12 +61,14 @@ html, body {
 }
 
 /* name */
-#firstName, #firstName span {
+#firstName,
+#firstName span {
   font-weight: 700;
   font-size: 8rem;
 }
 
-#lastName, #lastName span {
+#lastName,
+#lastName span {
   font-weight: 700;
   font-size: 3rem;
   margin-top: -3rem;
@@ -75,7 +76,6 @@ html, body {
 
 #header {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,6 +106,9 @@ html, body {
 /* header links */
 .links {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .links .button {
@@ -118,7 +121,8 @@ html, body {
   transition-timing-function: ease-in-out;
 }
 
-a, a:after {
+a,
+a:after {
   text-decoration: underline;
   color: #fff;
 }
@@ -129,7 +133,8 @@ a, a:after {
 
 /* Maximum width */
 @media (max-width: 520px) {
-  #firstName, #firstName span {
+  #firstName,
+  #firstName span {
     font-size: 6rem;
   }
 
@@ -148,7 +153,7 @@ a, a:after {
   }
 }
 
-/* about, projects, socials areas */ 
+/* about, projects, socials areas */
 .area {
   display: flex;
   flex-direction: column;
@@ -158,28 +163,28 @@ a, a:after {
 
 .area > div {
   width: calc(100% - 34px);
-  height: calc(100% - 34px);
-  border-color: #aaa;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.25);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.area > div > div {
-  width: calc(100% - 32px);
   max-width: 800px;
+  height: calc(100% - 34px);
+  padding-top: 16px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.area > div > div > p {
+
+
+.area > div > p {
   text-indent: 1cm;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  min-height: 100vh !important;
+  
 }
