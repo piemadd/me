@@ -159,6 +159,7 @@ a:after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .area > div {
@@ -171,12 +172,7 @@ a:after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
 
-
-
-.area > div > p {
-  text-indent: 1cm;
 }
 
 main {
