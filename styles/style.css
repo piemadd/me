@@ -163,7 +163,7 @@ a:after {
 
 .area > div {
   width: calc(100% - 34px);
-  max-width: 800px;
+  max-width: 900px;
   height: calc(100% - 34px);
   padding-top: 16px;
 
